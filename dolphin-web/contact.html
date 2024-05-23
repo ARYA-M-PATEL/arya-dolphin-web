@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dolphin-Career</title>
+
+    <!-- ***Bootstrap Cdn Link*** -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- ***Fontawsome Cdn*** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    
+    <!-- ***CSS Style Page Link*** -->
+    <link rel="stylesheet" href="./CSS/style-01.css" />
+
+     <!-- ***jquery cdn for common header and footer*** -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <section id="header"></section>
+
+    <!-- ***** section-about-img ***** -->
+    <section class="section page-main-img">
+        <div class="container-fluid  d-flex justify-content-center p-0">
+            <div id="page-img" class="page-img">
+                <div class="ab-img">
+                    <img src="./Images/Products/contact-us-3.jpg" />
+                </div>
+                <h2 class="page-content">Contact</h2>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ***** Why section ***** -->
+    <section class="section section-why common-section">
+        <div class="container-fluid p-0">
+            <div class="row d-flex why-area p-0">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12 why-image p-0 ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.91378913061!2d72.50406997603646!3d23.026937416163854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b3bf029e7b5%3A0x79f04cd53e9557b!2sEndlos%20Technologies%20Private%20Limited!5e0!3m2!1sen!2sin!4v1714474379438!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <style>
+                    iframe {
+                        width: 100%;
+                    }
+                </style>
+                <div
+                    class="col-lg-6 col-md-12 col-sm-12 col-12 why-content common-text-content bg-blue d-flex justify-content-center flex-column">
+                    <h2>Get In Touch</h2>
+
+                    <h3>AHMEDABAD</h3>
+                    <hr>
+
+                    <h2>Office Address</h2>
+                    <div class="footer-contact">
+                        <ul>
+                            <li><i class="fa-solid fa-envelope"></i> <span>dolphin1109@gmail.com</span></li>
+                            <li><i class="fa-solid fa-mobile-button"></i> <span>Phone: +91 9727802087</span></li>
+                            <li><i class="fa-solid fa-location-dot"></i> <span>1109, Shivalik Shilp, Iscon Road, SG.
+                                    Highway, Ahmedabad. 380015</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-why common-section">
+        <div class="container p-0 contact-bg">
+            <div class="row d-flex why-area p-0">
+                <div
+                    class="col-lg-8 col-md-8 col-sm-12 col-12  offset-lg-2 offset-md-2 why-content our-contact common-text-content  d-flex justify-content-center flex-column">
+                    <h2>Contact Us</h2>
+
+                    <form class="form1" id="contactForm" action="send_email.php" method="POST"
+                        onsubmit="return validateForm()">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+
+                        <button type="submit" class="btn border-white">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer"></section>
+</body>
+
+
+
+<script src="./JS/Main-01.js"></script>
+
+<!-- ***** common header and footer ****** -->
+<script>
+    $('#header').load('head.html')
+    $('#footer').load('footer.html')
+</script>
+
+<script>
+    function validateForm() {
+        var name = document.getElementById('name').value
+        var email = document.getElementById('email').value
+        var message = document.getElementById('message').value
+
+        if (!name || !email || !message) {
+            alert('All fields are required!')
+            return false
+        }
+
+        // Simple email validation (more sophisticated validation can be added)
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address.')
+            return false
+        }
+
+        return true
+    }
+</script>
+
+</html>
