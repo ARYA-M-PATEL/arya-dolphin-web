@@ -127,3 +127,5 @@ p_btns.addEventListener("click", (e) => {
 var video = document.getElementById("myVideo"); // Increase speed by settingplaybackRate property video.
 // playbackRate = 1; // This will play the video at
 // twice the normal speed
+
+// ************ Navbar *************

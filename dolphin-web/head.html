@@ -19,11 +19,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    
+
     <!-- ***CSS Style Page Link*** -->
     <link rel="stylesheet" href="./CSS/style-01.css" />
 
-     <!-- ***jquery cdn for common header and footer*** -->
+    <!-- ***jquery cdn for common header and footer*** -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -96,11 +96,11 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
+                                <li class="nav-item active">
                                     <a class="nav-link active" aria-current="page" href="./index.html">HOME</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./about.html">ABOUT US</a>
+                                <li class="nav-item ">
+                                    <a class="nav-link " href="./about.html">ABOUT US</a>
                                 </li>
 
                                 <li class="nav-item">
@@ -123,3 +123,15 @@
 </body>
 
 </html>
+
+	<script>
+        const navLi = document.querySelectorAll("nav .container ul li")
+
+
+        navLi.forEach((li) => {
+			li.classList.remove("active")
+			if (li.classList.contains(current)) {
+				li.classList.add("active")
+			}
+		})
+    </script>

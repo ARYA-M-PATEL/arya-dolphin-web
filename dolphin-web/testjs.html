@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Active Item</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .navbar , .navbar-nav {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            background-color: #333;
+        }
+
+        .nav-item {
+            display: block;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-item:hover {
+            background-color: #575757;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <!-- <ul class="navbar">
+            <li><a href="#home" class="nav-item">Home</a></li>
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#services" class="nav-item">Services</a></li>
+            <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul> -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" >HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" >ABOUT US</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link"> PRODUCTS</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link">CAREER</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link">CONTACT US</a>
+            </li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navItems = document.querySelectorAll('.nav-item')
+
+        navItems.forEach(item => {
+            item.addEventListener('click', function () {
+                navItems.forEach(nav => nav.classList.remove('active'))
+                this.classList.add('active')
+            })
+        })
+    });
+</script>

@@ -257,8 +257,16 @@ li {
   color: var(--heading);
   display: flex;
   align-items: center;
+  padding: 1rem 2rem;
 }
-
+.dolphin-nav .navbar .navbar-nav .nav-item a:hover {
+  color: var(--white);
+  background-color: var(--heading);
+}
+.dolphin-nav .navbar .navbar-nav .nav-item a.active {
+  color: var(--white);
+  background-color: var(--heading);
+}
 .navbar-nav .dropdown-menu {
   width: fit-content;
 }
@@ -1413,7 +1421,7 @@ textarea {
   .social-links {
     width: 100%;
     text-align: center;
-  } 
+  }
 
   .dolphin-nav .navbar .navbar-nav {
     display: flex;
