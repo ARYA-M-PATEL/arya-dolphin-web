@@ -259,13 +259,45 @@ li {
   align-items: center;
   padding: 1rem 2rem;
 }
-.dolphin-nav .navbar .navbar-nav .nav-item a:hover {
+.dolphin-nav .navbar .navbar-nav .nav-item :hover {
   color: var(--white);
   background-color: var(--heading);
 }
-.dolphin-nav .navbar .navbar-nav .nav-item a.active {
+
+.home .home-active {
   color: var(--white);
   background-color: var(--heading);
+}
+.home .home-active a {
+  color: var(--white) !important;
+}
+.about .about-active {
+  color: var(--white);
+  background-color: var(--heading);
+}
+.about .about-active a {
+  color: var(--white) !important;
+}
+.product .product-active {
+  color: var(--white);
+  background-color: var(--heading);
+}
+.product .product-active a {
+  color: var(--white) !important;
+}
+.career .career-active {
+  color: var(--white);
+  background-color: var(--heading);
+}
+.career .career-active a {
+  color: var(--white) !important;
+}
+.contact .contact-active {
+  color: var(--white);
+  background-color: var(--heading);
+}
+.contact .contact-active a {
+  color: var(--white) !important;
 }
 .navbar-nav .dropdown-menu {
   width: fit-content;
