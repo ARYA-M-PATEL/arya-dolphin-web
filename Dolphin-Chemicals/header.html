@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dolphin-header</title>
+
+    <!-- Bootstrap  Link -->
+    <link rel="stylesheet" href="./assets/Bootstrap/bootstrap.min.css">
+
+    <!-- Fontawsome css link -->
+    <link rel="stylesheet"
+        href="./assets/Font-awsome/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.css">
+
+
+    <!-- CSS Style Page Link -->
+    <link rel="stylesheet" href="./assets/CSS/style.css" />
+
+    <!-- media CSS Page Link -->
+    <link rel="stylesheet" href="./assets/CSS/media.css">
+
+</head>
+
+<body>
+    <section>
+        <!-- top bar start-->
+        <div class="top-bar container-fluid p-0 bg-blue d-lg-block d-md-block d-sm-none d-none">
+            <div class="row py-2 px-0 d-flex align-items-center justify-content-between">
+                <div class="col-lg-7 col-md-7 d-flex social-contact gap-20">
+                    <div class="d-flex align-items-center social-number">
+                        <a href="#" class="white d-flex"><i class="fa-solid fa-phone me-2" style="color: #ffffff;"></i>
+                            <p>+919727802087</p>
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-center social-mail">
+                        <a href="#" class="white d-flex"> <i class="fa-solid fa-envelope me-2"
+                                style="color: #ffffff;"></i>
+                            <p>info@dolphin.com</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-5 social-links d-flex">
+                    <ul class="d-flex align-items-center text-center list-unstyled social-items gap-30 ms-auto">
+                        <li>
+                            <a class="white" target="_blank" href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a class="white" target="_blank" href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a class="white" target="_blank" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  top bar end -->
+
+        <!--  Navbar start -->
+        <div class="dolphin-nav bg-light-blue">
+            <div class="container-fluid p-0 m-0">
+                <nav class="navbar navbar-expand-lg p-3">
+                    <div class="container-fluid">
+                        <a class="navbar-brand nav-logo" href="./index.html">
+                            <img src="./assets/images/logo/DOLPHIN CHEMICALS-2 - 1.png" alt class="img-fluid" />
+                        </a>
+
+                        <button class="navbar-toggler border-danger" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item home-active">
+                                    <a class="nav-link title" aria-current="page" href="./index.html">HOME</a>
+                                </li>
+                                <li class="nav-item about-active">
+                                    <a class="nav-link title" href="./about.html">ABOUT US</a>
+                                </li>
+
+                                <li class="nav-item product-active">
+                                    <a class="nav-link title" href="./product.html"> PRODUCTS</a>
+                                </li>
+
+                                <li class="nav-item career-active">
+                                    <a class="nav-link title" href="./career.html">CAREER</a>
+                                </li>
+                                <li class="nav-item contact-active">
+                                    <a class="nav-link title" href="./contact.html">CONTACT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--  Navbar end -->
+    </section>
+
+  
+    <!-- jquery cdn for common header and footer -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+
+    <!-- bootstrap js link -->
+    <script src="./assets/Bootstrap/bootstrap.min.js"></script>
+
+    <!-- Fontawsome js link -->
+    <script src="./assets/Font-awsome/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/js/all.js"></script>
+
+    <script>
+        const navLi = document.querySelectorAll("nav .container ul li")
+
+        navLi.forEach((li) => {
+            li.classList.remove("active")
+            if (li.classList.contains(current)) {
+                li.classList.add("active")
+            }
+        })
+    </script>
+</body>
+
+</html>
