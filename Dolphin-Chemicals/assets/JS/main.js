@@ -1,3 +1,4 @@
+// content change
 const p_btns = document.querySelector(".w-links");
 const p_btn = document.querySelectorAll(".w-link");
 const p_img_elem = document.querySelectorAll(".img-overlay");
@@ -36,9 +37,29 @@ p_btns.addEventListener("click", (e) => {
 // form validation
 
 function validateForm() {
-  var name = document.getElementById("name1").value;
-  var email = document.getElementById("email1").value;
-  var message = document.getElementById("message1").value;
+  var name1 = document.getElementById("name1").value;
+  var email1 = document.getElementById("email1").value;
+  var message1 = document.getElementById("message1").value;
+
+  if (!name1 || !email1 || !message1) {
+    alert("All fields are required!");
+    return false;
+  }
+
+  // Simple email validation (more sophisticated validation can be added)
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email1)) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+  return true;
+}
+
+// contact form validation
+function validateForm1() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
 
   if (!name || !email || !message) {
     alert("All fields are required!");
@@ -47,7 +68,7 @@ function validateForm() {
 
   // Simple email validation (more sophisticated validation can be added)
   var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(email1)) {
+  if (!emailPattern.test(email)) {
     alert("Please enter a valid email address.");
     return false;
   }
